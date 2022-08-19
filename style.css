@@ -1,0 +1,884 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button{
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-image: url(./img/bg_bggenerator_com.png);
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+.wrap{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.coin-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.coin-description{
+    width: 100%;
+    height: 50px;
+    font-size: 2em;
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin-top: 30px;
+    color: #915306;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.startCoin{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgb(209, 168, 68);
+    background: linear-gradient(127deg, rgba(209, 168, 68, 1) 0%, rgba(247, 216, 123, 1) 17%, rgba(254, 250, 149, 1) 32%, rgba(146, 84, 4, 1) 100%);
+}
+.coin {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgb(209, 168, 68);
+    background: linear-gradient(127deg, rgba(209, 168, 68, 1) 0%, rgba(247, 216, 123, 1) 17%, rgba(254, 250, 149, 1) 32%, rgba(146, 84, 4, 1) 100%);
+    /* animation: move1 8s infinite; */
+    display: none;
+    
+
+}
+
+.coin2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgb(209, 168, 68);
+    background: linear-gradient(127deg, rgba(209, 168, 68, 1) 0%, rgba(247, 216, 123, 1) 17%, rgba(254, 250, 149, 1) 32%, rgba(146, 84, 4, 1) 100%);
+    /* animation: move2 8s infinite; */
+    display: none;
+
+}
+.coin2 .coinText-container{
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+.coin__minicoin {
+    width: 97%;
+    height: 97%;
+    border-top: 1px solid #fcfffb;
+    border-left: 1px solid #fcfffb;
+    border-radius: 50%;
+    background: rgb(239, 226, 130);
+    background: linear-gradient(127deg, #efe282 0%, rgba(239, 226, 130, 1) 18%, rgba(226, 183, 91, 1) 50%, rgba(254, 254, 158, 1) 78%, rgba(214, 180, 83, 1) 100%);
+}
+.animation1{
+    animation: move1 8s 1;
+    animation-fill-mode: forwards;
+}
+.animation2{
+    animation: move2 8s 1;
+    animation-fill-mode: forwards;
+}
+.sideAnimation{
+    animation: side 8s 1;
+    animation-fill-mode: forwards;
+}
+.coin__center {
+    width: 90%;
+    height: 90%;
+    background: rgb(145, 83, 6);
+    background: linear-gradient(127deg, #915306 0%, rgba(253, 255, 157, 1) 100%);
+    border-top: 1px solid #fcfffb;
+}
+.skip-animation-button{
+    padding: 0 20px;
+}
+.coinText-container {
+    width: 96%;
+    height: 96%;
+    background: rgb(201, 157, 60);
+    background: linear-gradient(127deg, rgba(201, 157, 60, 1) 0%, rgba(201, 157, 60, 1) 7%, rgba(253, 214, 121, 1) 30%, rgba(225, 184, 92, 1) 55%, rgba(249, 246, 149, 1) 78%, rgba(208, 165, 70, 1) 97%);
+    font-size: 8em;
+}
+span {
+    color: #000;
+    font-weight: 800;
+    background: rgb(145, 89, 6);
+    background: linear-gradient(4deg, rgba(145, 89, 6, 1) 0%, rgba(208, 165, 70, 1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+@keyframes move1{
+    0%{
+        transform: rotate3d(0 , 1 , 0, 0deg);
+    }
+    2%{
+        transform: rotate3d(0 , 1 , 0, 90deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    2.000001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    4.9999%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    5%{
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+        transform: rotate3d(0 , 1 , 0, 270deg);
+    }
+    8%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    8.000001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    12.99999%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    13%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    18%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    18.000001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    24%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    24.000001%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    30%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    30.00001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    36%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    36.000001%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    42%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    42.00001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    48%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    48.000001%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    54%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    54.00001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    60%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    60.000001%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    66%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    66.00001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    74%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    74.000001%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    82%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    82.00001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    90%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    90.000001%{
+        transform: rotate3d(0 , 1 , 0, 90deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    100%{
+        transform: rotate3d(0 , 1 , 0, 0deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+}
+@keyframes move2{
+    0%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    2%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    2.000001%{
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+        transform: rotate3d(0 , 1 , 0, 270deg);
+    }
+    4.9999%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    5%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    8%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    8.000001%{
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+        transform: rotate3d(0 , 1 , 0, 270deg);
+    }
+    12.99999%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    13%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    18%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    18.000001%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    24%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    24.000001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    30%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    30.00001%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    36%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    36.000001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    42%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    42.00001%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    48%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    48.000001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    54%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    54.00001%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    60%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    60.000001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    66%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    66.00001%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    74%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    74.000001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    82%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    82.00001%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    90%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    90.000001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    100%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}
+@keyframes side{
+    0%{
+        transform: rotate3d(0 , 1 , 0, 0deg);
+    }
+    2%{
+        transform: rotate3d(0 , 1 , 0, 90deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    2.000001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    4.9999%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    5%{
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+        transform: rotate3d(0 , 1 , 0, 270deg);
+    }
+    8%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    8.000001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    12.99999%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    13%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    18%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    18.000001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    24%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    24.000001%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    30%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    30.00001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    36%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    36.000001%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    42%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    42.00001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    48%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    48.000001%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    54%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    54.00001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    60%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    60.000001%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    66%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    66.00001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    74%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    74.000001%{
+        transform: rotate3d(0 , 1 , 0, 270deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    82%{
+        transform: rotate3d(0 , 1 , 0, 450deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    82.00001%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    90%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    90.000001%{
+        transform: rotate3d(0 , 1 , 0, 90deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+    100%{
+        transform: rotate3d(0 , 1 , 0, 30deg);
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+    }
+}
+.coin-side {
+    width: 30px;
+    height: 250px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(216, 188, 31);
+    background: linear-gradient(180deg, rgba(216, 188, 31, 1) 0%, rgba(241, 214, 64, 1) 25%, rgba(255, 229, 82, 1) 50%, rgba(245, 218, 69, 1) 75%, rgba(216, 188, 31, 1) 100%);
+    padding: 5px 2px;
+    border-radius: 4px;
+}
+
+.row {
+    width: 100%;
+    height: 2px;
+    background-color: #a38b01;
+    border-radius: 1px;
+}
+.coinWithSideWrap {
+    display: none;
+    width: 190px;
+    margin-left: 30px;
+}
+.side {
+    transform: scale(0.7, 1);
+    position: absolute;
+    margin-left: -17px;
+    display: flex;
+}
+
+.coin-side-side {
+    height: 200px;
+    width: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+}
+.button-setins{
+    min-width: 175px;
+    min-height: 50px;
+    background-color: #915306;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 70px;
+    border: 2px solid #915306;
+    color: white;
+    transition: 0.3s;
+}
+.button-setins:hover{
+    background-color: transparent;
+    color: #915306;
+    transition: 0.3s;
+}
+.restart-btn{
+    display: none;
+}
+.skip-animation-button{
+    display: none;
+}
+.burger{
+    width: 350px;
+    height: 100vh;
+    left: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(31, 172, 253);
+    transition: left 0.2s ease;
+    z-index: 999;
+}
+.burger__active{
+    left: calc(100% - 350px);
+    transition: left 0.2s linear;
+}
+.burger__button{
+    width: 25px;
+    position: absolute;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: calc(100% + 25px);
+    background-color: rgb(31, 172, 253);
+    height: 25vh;
+    top: calc(50% - 25vh / 2);
+    box-shadow: 5px 0px 2px rgb(0, 162, 255);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.burger__container{
+    width: 85%;
+    height: 95%;
+    overflow: auto;
+}
+.burger__container::-webkit-scrollbar{
+    width: 0;
+}
+.burger__header{
+    font-size: 2em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    color: white;
+    letter-spacing: 0.4px;
+    font-family: 'Montserrat', sans-serif;
+}
+.burger__header button{
+    min-width: 100%;
+    height: 45px;
+    background-color: #1f78fd;
+    color: white;
+    letter-spacing: 0.2px;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    cursor: pointer;
+    border: 2px solid #1f78fd;
+    transition: top 0.3s;
+    margin-top: 30px;
+    box-shadow: 0 3px 0 #0064fa;
+}
+.burger__header button img {
+    width: 12px;
+    margin-left: 10px;
+}
+.burger__header button:active{
+    position: relative;
+    top: 3px;
+    box-shadow: none;
+}
+.history-box{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    color: white;
+    /* margin-top: 10px; */
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.history-box:nth-child(1){
+    margin-top: 30px;
+}
+.burger__button__active{
+    animation: arrowSpin 0.2s 1 forwards;
+}
+@keyframes arrowSpin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+@media screen and (max-width:1400px){
+    .burger{
+        width: 300px;
+    }
+    .burger__active{
+        left: calc(100% - 300px);
+    }
+    .burger__header{
+        font-size: 1.8em;
+    }
+    .burger__header button{
+        height: 42px;
+        margin-top: 20px;
+    }
+    .button-setins{
+        margin-top: 40px;
+    }
+    .coin-description{
+        font-size: 1.8em;
+    }
+}
+@media screen and (max-width:400px){
+    .burger{
+        width: 80%;
+    }
+    .burger__active{
+        left: calc(100% - 80%)
+    }
+}
